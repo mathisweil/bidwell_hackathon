@@ -1,0 +1,65 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.joblib
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# -------------------------
+# Jupyter
+# -------------------------
+.ipynb_checkpoints/
+.notebooks_cache/
+
+# -------------------------
+# Data
+# -------------------------
+data/raw/
+data/cleaned/
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# Keep a placeholder file if you want folders tracked
+!data/raw/.gitkeep
+!data/cleaned/.gitkeep
+
+# -------------------------
+# Outputs
+# -------------------------
+outputs/models/
+outputs/*.log
+outputs/*.txt
+
+# Keep folder structure but ignore files
+!outputs/models/.gitkeep
+!outputs/.gitkeep
+
+# -------------------------
+# OS and Editor files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# -------------------------
+# Environment / Secrets
+# -------------------------
+.env
+.env.*
+*.key
+*.credentials
+*.secret
