@@ -15,15 +15,15 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-models_path = f'{os.getcwd()}/src/models'
+models_path = f'{os.getcwd()}/../../outputs/models'
 
 # --------------------------------------------------------------
 # Generic loader
 # --------------------------------------------------------------
 def load_artifacts(prefix, model_name):
-    model = joblib.load(f"{models_path}/{prefix}_{model_name}.joblib")
-    threshold = joblib.load(f"{models_path}/{prefix}_{model_name}_threshold.pkl")
-    metadata = joblib.load(f"{models_path}/{prefix}_{model_name}_metadata.pkl")
+    model = joblib.load(f"{models_path}/{prefix}/{model_name}.joblib")
+    threshold = joblib.load(f"{models_path}/{prefix}/{model_name}_threshold.pkl")
+    metadata = joblib.load(f"{models_path}/{prefix}/{model_name}_metadata.pkl")
     return model, threshold, metadata
 
 appeals_model, appeals_threshold, appeals_meta = load_artifacts(

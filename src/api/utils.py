@@ -1,6 +1,5 @@
 import re
 
-
 def clean_input_general(input_dict: dict) -> dict:
     cleaned = {}
 

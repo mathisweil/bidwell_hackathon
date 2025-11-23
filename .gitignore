@@ -1,10 +1,12 @@
-# -------------------------
-# Python
-# -------------------------
+# =========================================================
+# PYTHON
+# =========================================================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Model / pickle artefacts
 *.pkl
 *.joblib
 
@@ -13,15 +15,15 @@ __pycache__/
 venv/
 env/
 
-# -------------------------
-# Jupyter
-# -------------------------
+# =========================================================
+# JUPYTER
+# =========================================================
 .ipynb_checkpoints/
 .notebooks_cache/
 
-# -------------------------
-# Data
-# -------------------------
+# =========================================================
+# DATA
+# =========================================================
 data/raw/
 data/cleaned/
 *.csv
@@ -30,24 +32,53 @@ data/cleaned/
 *.parquet
 *.feather
 
-# Keep a placeholder file if you want folders tracked
+# Keep folder structure
 !data/raw/.gitkeep
 !data/cleaned/.gitkeep
 
-# -------------------------
-# Outputs
-# -------------------------
+# =========================================================
+# OUTPUTS (MODELS, THRESHOLDS, METADATA)
+# =========================================================
 outputs/models/
+outputs/**/*.pkl
+outputs/**/*.joblib
+outputs/**/*.json
 outputs/*.log
 outputs/*.txt
 
-# Keep folder structure but ignore files
+# Keep structure
 !outputs/models/.gitkeep
 !outputs/.gitkeep
 
-# -------------------------
-# OS and Editor files
-# -------------------------
+# =========================================================
+# HYDRA OUTPUT (if running with hydra.run.dir=outputs)
+# =========================================================
+multirun/
+outputs_hydra/
+# Hydra default directories
+hydra_output/
+# OmegaConf caches (if any)
+*.hydra/
+
+# =========================================================
+# FASTAPI / SERVER
+# =========================================================
+uvicorn.log
+*.db
+__pycache__/
+
+# =========================================================
+# CONFIG / SECRET FILES
+# =========================================================
+.env
+.env.*
+*.key
+*.secret
+*.credentials
+
+# =========================================================
+# OS / EDITOR
+# =========================================================
 .DS_Store
 Thumbs.db
 
@@ -55,11 +86,5 @@ Thumbs.db
 .vscode/
 *.code-workspace
 
-# -------------------------
-# Environment / Secrets
-# -------------------------
-.env
-.env.*
-*.key
-*.credentials
-*.secret
+# PyCharm
+.idea/
